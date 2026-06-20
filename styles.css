@@ -1,0 +1,29 @@
+/* Styles for the Shpritzafim site */
+:root{--bg:#0b1220;--card:#121b2e;--text:#e9f1ff;--muted:#9db3d5;--accent:#00aaff;--accent2:#73f2ff}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:'Heebo',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:radial-gradient(1000px 600px at 70% -10%,#0e1a32,transparent),var(--bg);color:var(--text)}
+
+.hero{padding:64px 24px 32px;text-align:center;background:linear-gradient(180deg,rgba(5,13,26,.7),rgba(5,13,26,0));position:relative;overflow:hidden}
+.hero h1{margin:0;font-size:48px;line-height:1.1;letter-spacing:-.5px}
+.tagline{color:var(--muted);margin:8px 0 24px}
+.cta{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#02131a;padding:14px 22px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(0,170,255,.25)}
+.cta:hover{transform:translateY(-1px)}
+
+.content{max-width:980px;margin:0 auto;padding:0 16px 64px}
+.card{background:var(--card);border:1px solid rgba(115,242,255,.12);border-radius:16px;padding:20px;margin:18px 0;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.card h2,.card h3{margin-top:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.note{border-left:4px solid var(--accent);}
+ul,ol{margin:0 0 0 1rem}
+li{margin:6px 0}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.footer{padding:24px;color:var(--muted);text-align:center;border-top:1px solid rgba(115,242,255,.08)}
+
+/* Spray effect */
+.droplet{position:fixed;width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#7ae1ff,var(--accent));box-shadow:0 0 12px rgba(115,242,255,.6);pointer-events:none;opacity:.95;}
+@keyframes pop{to{transform:translate(var(--dx),var(--dy)) scale(.7);opacity:0}}
+
